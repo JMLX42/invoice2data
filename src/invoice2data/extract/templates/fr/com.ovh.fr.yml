@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 issuer: OVH.com
 fields:
-  amount: TOTAL\s+TTC\s+([\d ]+,\d{2})
-  amount_untaxed: PRIX\s+HT\s+([\d ]+,\d{2})
-  date: Date\s+:\s+(\d+ .+ \d{4})
+  amount: Total\s+TTC\s+([\d ]+,\d{2})
+  amount_untaxed: Prix\s+HT\s+([\d ]+,\d{2})
+  amount_taxes:
+    - Total\s+taxes\s+([\d ]+,\d{2})
+    - TVA\s\(20\s%\)\s+([\d ]+,\d{2})
+  date: Date\s+d'emission\s+:\s+(\d+/\d+/\d+)
   invoice_number: Facture\s+.+(FR\w+)
   static_vat: FR22424761419
 keywords:
@@ -13,7 +16,8 @@ keywords:
 options:
   currency: EUR
   date_formats:
-    - '%d %B %Y'
+    - '%d/%B/%Y'
   languages:
     - fr
   decimal_separator: ','
+  remove_accents: true
