@@ -1,0 +1,14 @@
+issuer: FreeNow
+keywords:
+- FREENOW
+- FR11807978119
+fields:
+  amount: Montanttotalàpayer(\d+\,\d+)€
+  invoice_number: Numérodefacture:(\d+-\d+)
+  date: Paris,(\d+\/\d+/\d+)
+  amount_taxes: TotalTVA(\d+\,\d+)€
+  trip_id: IDCourse:(\w+)
+options:
+  remove_whitespace: true
+  currency: EUR
+  decimal_separator: ","
