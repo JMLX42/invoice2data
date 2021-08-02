@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+issuer: OVH Telecom
+fields:
+  amount: Total\s+de\s+la\s+facture\s+TTC\s+([\d ]+,\d{2})
+  amount_untaxed: Total\s+de\s+la\s+facture\s+HT\s+([\d ]+,\d{2})
+  amount_taxes: Total\s+taxes\s+([\d ]+,\d{2})
+  date: Date\s+:\s+(\d+/\d+/\d+)
+  invoice_number: Facture\s+.+(FR\w+)
+  static_vat: FR22424761419
+keywords:
+  - ovhtelecom.fr
+  - FR 22 424 761 419
+options:
+  currency: EUR
+  date_formats:
+    - '%d/%B/%Y'
+  languages:
+    - fr
+  decimal_separator: ','
+  remove_accents: true
